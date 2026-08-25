@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Up - Smart Adaptive Practice</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forestGreen: '#2E7D32',
+            emerald: '#43A047',
+            skyBlue: '#4FC3F7',
+            riverBlue: '#29B6F6',
+            sunshineYellow: '#FFD54F',
+            orangeAccent: '#FFA726',
+            coral: '#FF7043',
+            creamWhite: '#FFFDF7',
+            warmBeige: '#F5F1E8',
+          },
+          fontFamily: {
+            baloo: ['"Baloo 2"', 'cursive'],
+            sans: ['Nunito', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body {
+      font-size: 14px;
+    }
+    .soft-3d-button {
+      box-shadow: 0 6px 0px #1B5E20;
+      transition: all 0.1s ease;
+    }
+    .soft-3d-button:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0px #1B5E20;
+    }
+    .soft-3d-button-orange {
+      box-shadow: 0 6px 0px #E65100;
+      transition: all 0.1s ease;
+    }
+    .soft-3d-button-orange:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0px #E65100;
+    }
+    .soft-3d-button-blue {
+      box-shadow: 0 6px 0px #0288D1;
+      transition: all 0.1s ease;
+    }
+    .soft-3d-button-blue:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0px #0288D1;
+    }
+    .soft-3d-card {
+      box-shadow: 0 8px 16px rgba(46, 125, 50, 0.08), 0 4px 0px rgba(210, 200, 180, 0.4);
+      border: 2px solid #E6E1D5;
+    }
+    .glassmorphism {
+      background: rgba(255, 253, 247, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    @keyframes sway {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+    .animate-sway {
+      animation: sway 4s ease-in-out infinite;
+    }
+    @keyframes gentle-float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1deg); }
+    }
+    .animate-float {
+      animation: gentle-float 6s ease-in-out infinite;
+    }
+    @keyframes pulse-glow {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 112, 67, 0.4); }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(255, 112, 67, 0.2); }
+    }
+    .animate-pulse-glow {
+      animation: pulse-glow 2.5s infinite ease-in-out;
+    }
+    @keyframes mic-wave {
+      0%, 100% { height: 12px; }
+      50% { height: 44px; }
+    }
+    .wave-bar {
+      animation: mic-wave 1.2s ease-in-out infinite;
+    }
+    .wave-bar:nth-child(2n) { animation-delay: 0.2s; }
+    .wave-bar:nth-child(3n) { animation-delay: 0.4s; }
+    .wave-bar:nth-child(4n) { animation-delay: 0.15s; }
+    ::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F5F1E8;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2E7D32;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-[#F0EDE4] text-[#2C3E2F] font-sans antialiased min-h-screen">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

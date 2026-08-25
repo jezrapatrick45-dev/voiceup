@@ -1,0 +1,10 @@
+{
+  "name": "Voice up",
+  "description": "Voice-up",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
